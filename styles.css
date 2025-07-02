@@ -41,14 +41,14 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 1rem;
+  padding: 8px 16px;
   z-index: 1000;
   height: var(--top-bar-height);
 }
 
 .top-bar h1 {
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 18px;
 }
 
 .top-bar button {
@@ -61,7 +61,7 @@ body {
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
   transition: background 0.3s, transform 0.2s;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 16px;
 }
 
 .top-bar button:hover {
@@ -83,19 +83,8 @@ header {
   height: calc(100vh-var(--top-bar-height));
 }
 
-.section {
-  scroll-snap-align: start;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-  box-sizing: border-box;
-  border-bottom: 1px solid #ccc;
-}
-
 #front-page {
-  height: 100vh;
+  height: calc(100vh - var(--top-bar-height));
 }
 
 #langMenu {
@@ -136,12 +125,13 @@ header {
   border: 1px solid #ccc;
   border-radius: 8px;
   max-height: 200px;
-  max-width: 200px;
+  width: 200px;
   overflow-y: auto;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 
-  position: absolute;
+  position:absolute;
   right: 20px;
+  top: var(--top-bar-height);
 }
 
 
@@ -168,8 +158,26 @@ header {
   background-color: #e0e0e0;
 }
 
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--text-color);
+  color: var(--card-bg);
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1000; /* über allem anderen */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+}
 
-
+#scrollToTopBtn:hover {
+  background-color: var(--text-color);
+}
 
 
 h1 {
@@ -180,7 +188,7 @@ h1 {
 }
 
 .controls {
-  display: flex;
+  display: flex; 
   gap: 10px;
   align-items: center;
 }
@@ -200,7 +208,7 @@ nav {
   justify-content: center;
 }
 
-.section {
+.front-page-section {
   display: flex;
   align-items: center;
   background: var(--soft-bg);
@@ -208,9 +216,15 @@ nav {
   margin-bottom: 20px;
   border-radius: 12px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+  scroll-snap-align: start;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ccc;
 }
 
-.section img {
+.front-page-section img {
   height: 30vh;
   width: 90vh;
   object-fit: contain;
@@ -219,14 +233,40 @@ nav {
   border-radius: 50%;
 }
 
-h2 {
-  margin-top: 0;
-  font-size: 1.5rem;
-  color: var(--text-color);
+.section {
+  display: flex;
+  align-items: center;
+  background: var(--soft-bg);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+  scroll-snap-align: start;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ccc;
+}
+
+.section img {
+  float: left;
+  height: 20vh;
+  width: 20vh;
+  object-fit:cover;
+  background: var(--card-bg);
+  border-radius: 10px;
+}
+
+#Larry {
+  margin: 0 0 15px 15px;
+  float: right;
 }
 
 p {
-  max-width: 600px;
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: var(--text-color);
 }
 
 .large-text {

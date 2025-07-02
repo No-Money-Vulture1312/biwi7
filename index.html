@@ -10,9 +10,9 @@
 <body>
   <header role="banner" class="top-bar">
     <div class="menu">
-      <h1>Wahlen?</h1>
-      <h1>Demo-was?</h1>
-      <h1>Mitbestimmung?</h1>
+      <div id="wahlen_top"><h1>Wahlen?</h1></div>
+      <div id="definition_top"><h1>Demo-was?</h1></div>
+      <div id="mitbestimmung_top"><h1>Mitbestimmung?</h1></div>
     </div>
     <div class="controls">
       
@@ -24,29 +24,36 @@
       <button id="fontBtnDown">A-</button>
       <button id="fontBtnUp">A+</button>
       <button id="darkBtn">🌙</button>
+
+      <div id="langMenu2"></div>
       
     </div>
   </header>
 
-  <div id="langMenu2"></div>
+  
+
+  <button id="scrollToTopBtn" title="Nach oben scrollen">↑</button>
 
   <div role="main" class="content-container">
-    <div id="front-page" class="section">
+    <div id="front-page" class="front-page-section">
       <section tabindex="0">
-        <img src="Wahlen.webp" alt="Wenn du hier drauf klickst kommst du zum Unterpunkt Wahlen - da wird erklärt wie Wahlen funktionieren und auch wie sie in der Schule umgesetzt werden können.">
+        <img id="wahlen_banner" src="Wahlen.webp" alt="Wenn du hier drauf klickst kommst du zum Unterpunkt Wahlen - da wird erklärt wie Wahlen funktionieren und auch wie sie in der Schule umgesetzt werden können.">
       </section>
 
       <section tabindex="0">
-        <img src="Demokratie.webp" alt="Wenn du hier drauf klickst kommst du zum Unterpunkt Definitionen - hier wird erklärt was Demokratie, Soziokratie, ... eigentlich bedeutet und was sie unterscheiden">
+        <img id="definition_banner" src="Demokratie.webp" alt="Wenn du hier drauf klickst kommst du zum Unterpunkt Definitionen - hier wird erklärt was Demokratie, Soziokratie, ... eigentlich bedeutet und was sie unterscheiden">
       </section>
 
       <section tabindex="0">
-        <img src="mitbestimmung.webp" alt="Wenn du hier drauf klickst kommst du zum Unterpunkt Mitbestimmung - hier wird erklärt wie man Mitbestimmung in der Schule umsetzten kann und wie man dabei darauf achtet, dass alle gleichwertig teilnehmen können.">
+        <img id="mitbestimmung_banner" src="mitbestimmung.webp" alt="Wenn du hier drauf klickst kommst du zum Unterpunkt Mitbestimmung - hier wird erklärt wie man Mitbestimmung in der Schule umsetzten kann und wie man dabei darauf achtet, dass alle gleichwertig teilnehmen können.">
       </section>
     </div>
 
     <div id="wahlen_inhalt" class="section">
-    <h2>Der Chief Mouser to the Cabinet Office (deutsch etwa „Oberster Mäusejäger des Kabinetts“) ist der Titel der Hauskatze des Premierministers des Vereinigten Königreichs in der Downing Street Nr. 10. Nur eine Katze, Larry, erhielt den Titel offiziell,[1] andere Katzen erhalten den Titel nur als Kosename zumeist von der britischen Presse.
+      <h1>Wahlen</h1>
+
+    <img src="Larry_Chief_Mouser.jpg" alt="Larry" id="Larry">
+    <p>Der Chief Mouser to the Cabinet Office (deutsch etwa „Oberster Mäusejäger des Kabinetts“) ist der Titel der Hauskatze des Premierministers des Vereinigten Königreichs in der Downing Street Nr. 10. Nur eine Katze, Larry, erhielt den Titel offiziell,[1] andere Katzen erhalten den Titel nur als Kosename zumeist von der britischen Presse.
 
 Geschichte
 Das Amt des Chief Mousers ist seit der Regierungszeit Heinrichs VIII. besetzt,[2] seit Kardinal Wolsey seine Katze neben sich platzierte, während er seinen Amtsgeschäften als Lordkanzler nachging.[3] Offizielle Dokumente, die am 4. Januar 2005 im Rahmen des Freedom of Information Act 2000 veröffentlicht wurden, reichen nur bis zum 3. Juni 1929 zurück,[4][5] als AE Banham das Schatzamt autorisierte, „für die Haltung einer effizienten Katze“ 1 Penny Sterling pro Tag aus der Portokasse aufzuwenden.[6] Im April 1932 wurde das wöchentliche Budget auf 1 Shilling 6 Pence erhöht. Im 21. Jahrhundert kostet der Mäusejäger 100 £ pro Jahr.[7]
@@ -72,11 +79,12 @@ Wilberforce	1970	1988	Edward Heath, Harold Wilson, Jim Callaghan, Margaret Thatc
 Humphrey	1989	1997	Margaret Thatcher, John Major, Tony Blair	[23]
 Sybil	2007	2008	Gordon Brown	[24]
 Larry	2011	amtierend	David Cameron, Theresa May, Boris Johnson, Liz Truss, Rishi Sunak, Keir Starmer	[16][17][25][26]
-Freya	2012	2014	David Cameron	[17][27]</h2>
+Freya	2012	2014	David Cameron	[17][27]</p>
   </div>
 
   <div id="definition_inhalt" class="section">
-    <h2>
+    <h1>Definitionen</h1>
+    <p>
       Als IKEA-Effekt wird in der Verhaltensökonomik der Zuwachs an Wertschätzung bezeichnet, der selbst entworfenen oder zumindest selbst zusammengebauten Gegenständen im Vergleich zu fertig gekauften Massenprodukten entgegengebracht wird. Die Benennung nach dem Möbelhersteller IKEA und dessen durch den Kunden zu montierenden Produkten wurde 2009 durch den Wirtschaftswissenschaftler Michael Norton geprägt.[1] Quantitativ erreicht die gesteigerte Wertschätzung durch die selbst durchgeführte Montage eines Massenartikels fast die Wertschätzung für ein individuell durch einen Handwerker gefertigtes Einzelstück.[2]
 
 Vergleichbar ist der Endowment-Effekt (deutsch Besitztumseffekt), der besagt, dass Menschen dazu tendieren, ein Gut wertvoller einzuschätzen, wenn sie es besitzen.
@@ -91,12 +99,13 @@ Weiterhin konnte die Hypothese, dass zum Auftreten des IKEA-Effekts der erfolgre
 
 Weitere Forschung
 In einer 2010 veröffentlichten Laborstudie stellten Neurowissenschaftler der Johns Hopkins University fest, dass ein ähnlicher Effekt auch bei Mäusen zu beobachten sei. In dem Experiment hatten die Labormäuse die Auswahl zwischen zwei Nahrungsquellen: Um die zuckrige Flüssigkeit mit dem Geschmack A zu erhalten, mussten sie einen von zwei Hebeln drücken. Um die zuckrige Flüssigkeit mit dem Geschmack B zu erhalten, mussten sie den anderen Hebel drücken. Nach und nach wurde für eine der beiden Geschmacksrichtungen der Arbeitsaufwand erhöht, d. h. die Mäuse mussten den entsprechenden Hebel bis zu 15 Mal drücken. Für die jeweils andere Geschmacksrichtung blieb der Aufwand gleich. Nach der Rückkehr in den Heimatkäfig zeigten die Mäuse eine signifikante Präferenz für diejenige Geschmacksrichtung, für die sie härter arbeiten mussten.[5]
-    </h2>
+    </p>
 
   </div>
 
   <div id="mitbestimmung_inhalt" class="section">
-    <h2>
+    <h1>Mitbestimmung</h1>
+    <p>
       Die Raufutter verzehrende Großvieheinheit, auch: raufutterverzehrende Großvieheinheit, (RGV oder RGVE) ist eine Größeneinheit, die in der Land- und Forstwirtschaft und allgemein für ökologische Berechnungen verwendet wird. Sie ermöglicht es, Tiere verschiedener Arten und Altersklassen zusammenzurechnen. Unter Raufutter werden dabei rohfaserreiche Futtermittel verstanden.
 
 Begriff und Anwendung
@@ -157,7 +166,7 @@ Kurzf.: RVE Wortverbindung, die nichts weiter als ‚Kuh‘ bedeutete und die ei
 Franz Planatscher stellt den Ausdruck 1986 in Der Sprachdienst als Neologismus vor:
 
 „[…] oder es können neue Zusammensetzungen sein, z. B. die ‚rauhfutterverzehrende Großvieheinheit‘ (EG-Deutsch). Wie schlicht, wie einfach ist dagegen unsere gute alte Kuh (nur drei Buchstaben!).“[14]
-    </h2>
+    </p>
 
   </div>
   </div>

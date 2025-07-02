@@ -70,6 +70,19 @@ function toggleFontSize(step) {
   document.documentElement.style.fontSize = currentFontSize + 'px';
 }
 
+function scrollSeite(name) {
+  const ziel = document.getElementById(name);
+
+  const rect = ziel.getBoundingClientRect();
+  const offsetTop = window.pageYOffset + rect.top;
+  const gap =  parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--top-bar-height').trim());
+
+  window.scrollTo({
+    top: offsetTop - gap,
+    behavior: 'smooth'
+  });
+}
+
 document.getElementById('langButton').addEventListener('click', () => {
   const menu = document.getElementById('langMenu2');
   menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
@@ -85,4 +98,32 @@ document.getElementById('fontBtnDown').addEventListener('click', function () {
 
 document.getElementById('fontBtnUp').addEventListener('click', function () {
   toggleFontSize(1);
+});
+
+document.getElementById("wahlen_banner").addEventListener('click', function() {
+  scrollSeite('wahlen_inhalt')
+});
+document.getElementById("wahlen_top").addEventListener('click', function() {
+  scrollSeite('wahlen_inhalt')
+});
+
+document.getElementById("definition_banner").addEventListener('click', function() {
+  scrollSeite('definition_inhalt')
+});
+document.getElementById("definition_top").addEventListener('click', function() {
+  scrollSeite('definition_inhalt')
+});
+
+document.getElementById("mitbestimmung_banner").addEventListener('click', function() {
+  scrollSeite('mitbestimmung_inhalt')
+});
+document.getElementById("mitbestimmung_top").addEventListener('click', function() {
+  scrollSeite('mitbestimmung_inhalt')
+});
+
+document.getElementById('scrollToTopBtn').addEventListener('click', function () {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
 });
